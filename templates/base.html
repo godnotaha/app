@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    {% block link %}{% endblock %}
+
+</head>
+<body>
+
+    <aside class="aside">
+    <div class="main_header">
+
+        <div class="badge">
+            <img class="site_icon" src="{{ url_for('static', filename='img/banknote.jpg') }}">
+        </div>
+
+        <!-- <nav class="el_menu"> -->
+            <ul class="els_menu">
+                <li><a href="/home"><img class="el_menu" src="{{ url_for('static', filename='img/charge.svg') }}" alt=""></a></li>
+                <li><a href=""><img class="el_menu" src="{{ url_for('static', filename='img/money.svg') }}" alt=""></a></li>
+                <li><a href="/statistic"><img class="el_menu" src="{{ url_for('static', filename='img/statistic.svg') }}" alt=""></a></li>
+                <li><a href=""><img class="el_menu" src="{{ url_for('static', filename='img/library.svg') }}" alt=""></a></li>
+                <li><a href=""><img class="el_menu" src="{{ url_for('static', filename='img/temporarily.svg') }}" alt=""></a></li>
+            </ul>
+
+        </nav>
+
+        <div class="exit">
+            <a href=""><img class="button_exit" src="{{ url_for('static', filename='img/exit.svg') }}" alt=""></a>
+        </div>
+
+    </div>
+    </aside>
+    {% block aside %}{% endblock %}
+    {% block main %}{% endblock %}
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>

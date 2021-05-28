@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block link %}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">{% endblock %}
+
+{% block main %}
+<main class = "main"><h1>Статистика</h1>
+
+
+
+
+
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Название</th>
+            <th scope="col">Количество прослушиваний</th>
+            <th scope="col">Время прослушивания</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Ты горишь как огонь</td>
+            <td>3</td>
+            <td>9:27</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+
+  <a href="home_page.html"><img src="img\exit.svg" alt=""></a></main>{% endblock %}
+{% block title %}статистика{% endblock %}

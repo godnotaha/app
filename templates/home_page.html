@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <main class="main">
+ 
+    <div class="menu">
+
+            <h1 class="the_main">Главная</h1>
+
+        <div class="menu_right">
+
+            <div class="nav_menu">
+                <img class="customization" src="{{ url_for('static', filename='img/customization.svg') }}" alt="">
+                <img src="{{ url_for('static', filename='img/Search.svg') }}" alt="">
+                <img src="{{ url_for('static', filename='img/notification.svg') }}" alt="">
+                
+            </div>
+
+            <div class="personal_data">
+                <!-- <img src="img\name background.svg" alt=""> -->
+                <img class="avatar" src="{{ url_for('static', filename='img/avatar.svg') }}" alt="">
+                <div class="name">Твой ник</div>
+                <img class="arrow" src="{{ url_for('static', filename='img/arrow.svg') }}" alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="selection_of_the_type_of_music">
+
+        <div class="type_favorite">
+
+            <div class="appointment1">любимое</div>
+            <div>
+
+                <img class="black_cloud" src="{{ url_for('static', filename='img/cloud.svg') }}" alt="">
+                <img class="music_wave" src="{{ url_for('static', filename='img/wave.svg') }}" alt="">
+
+            </div>
+        </div>
+        <div class="type_opposite">
+
+            <div class="appointment2">противное</div>
+            <div class="white-box">
+
+                <!-- <img src="img\white.svg" alt=""> -->
+                <img class="B" src="{{ url_for('static', filename='img/B.svg') }}" alt="">
+
+            </div>
+        </div>
+        <div class="type_favorites">
+
+            <div class="appointment3">избранное</div>
+            <div class="white-box">
+
+                <!-- <img src="img\white.svg" alt=""> -->
+                <img class="plus" src="{{ url_for('static', filename='img/плюс.svg') }}" alt="">
+
+            </div>
+        </div>
+        <div class="type_forbidden_music">
+
+            <div class="appointment4">запретная музыка</div>
+            <div class="white-box">
+
+                <!-- <img src="img\white.svg" alt=""> -->
+                <img class="eth" src="{{ url_for('static', filename='img/ethereum 1.svg') }}" alt="">
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="music_menu">
+
+        <div class="number1">
+
+            <img class="icon" src="{{ url_for('static', filename='img/Fire.svg') }}" alt="">
+
+            <div class="name_music">
+
+                <div class="name_of_music">Ты горишь как огонь</div>
+                <div class="author">SLAWA MARLOW</div>
+
+            </div>
+
+            <div class="duration_of_music">2.18</div>
+
+            <img class="star" src="{{ url_for('static', filename='img/Star.svg') }}" alt="">
+
+        </div>
+        <div class="number2">
+
+            <img class="icon" src="{{ url_for('static', filename='img/Astronaut in the Ocean.svg') }}" alt="">
+
+            <div class="name_music">
+
+                <div class="name_of_music">Astronaut in the Ocean</div>
+                <div class="author">MASKED WOLF</div>
+
+            </div>
+
+            <div class="duration_of_music">2.13</div>
+
+            <img class="star" src="{{ url_for('static', filename='img/Star.svg') }}" alt="">
+
+        </div>
+        <div class="number3">
+
+            <img class="icon" src="{{ url_for('static', filename='img/Where does love go.svg') }}" alt="">
+
+            <div class="name_music">
+
+                <div class="name_of_music">Where does love go</div>
+                <div class="author">Synymata, Elle Love Go</div>
+                
+            </div>
+
+            <div class="duration_of_music">4.23</div>
+
+            <img class="star" src="{{ url_for('static', filename='img/Star.svg') }}" alt="">
+
+        </div>
+        <div class="number4">
+
+            <img class="icon" src="{{ url_for('static', filename='img/Carousel.svg') }}" alt="">
+
+            <div class="name_music">
+
+                <div class="name_of_music">Carousel</div>
+                <div class="author">Hightcore Reality</div>
+
+            </div>
+
+            <div class="duration_of_music">3.16</div>
+
+            <img class="star" src="{{ url_for('static', filename='img/Star.svg') }}" alt="">
+
+        </div>
+    </div>
+    </main>
+{% endblock %}
