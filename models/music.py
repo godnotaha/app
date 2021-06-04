@@ -8,11 +8,12 @@ class Music(SqlAlchemyBase):
 
 
     id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True, autoincrement=True)
-    name = sqlalchemy.Column(sqlalchemy.String(120), index=True, unique=True)
-    count = sqlalchemy.Column(sqlalchemy.Integer)
     user_id = sqlalchemy.Column(sqlalchemy.Integer,
                                 sqlalchemy.ForeignKey("users.id"))
     user = sqlalchemy.orm.relation('User')
+    music_id = sqlalchemy.Column(sqlalchemy.Integer,
+                                sqlalchemy.ForeignKey("all_music.id"))
+    music = sqlalchemy.orm.relation('All_music')
 
 
     def get_id(self):

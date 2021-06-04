@@ -74,70 +74,72 @@
 
     <div class="music_menu">
 
-        <div class="number1">
+<!--        <div class="number1">-->
 
-            <img class="icon" src="{{ url_for('static', filename='img/Fire.svg') }}" alt="">
+<!--            <img class="icon" src="{{ url_for('static', filename='img/Fire.svg') }}" alt="">-->
 
-            <div class="name_music">
+<!--            <div class="name_music">-->
 
-                <div class="name_of_music">Ты горишь как огонь</div>
-                <div class="author">SLAWA MARLOW</div>
+<!--                <div class="name_of_music">Ты горишь как огонь</div>-->
+<!--                <div class="author">SLAWA MARLOW</div>-->
 
-            </div>
+<!--            </div>-->
 
-            <div class="duration_of_music">2.18</div>
+<!--            <div class="duration_of_music">2.18</div>-->
 
-            <img class="star" src="{{ url_for('static', filename='img/Star.svg') }}" alt="">
+<!--            <img class="star" src="{{ url_for('static', filename='img/Star.svg') }}" alt="">-->
 
-        </div>
-        <div class="number2">
+<!--        </div>-->
+<!--        <div class="number2">-->
 
-            <img class="icon" src="{{ url_for('static', filename='img/Astronaut in the Ocean.svg') }}" alt="">
+<!--            <img class="icon" src="{{ url_for('static', filename='img/Astronaut in the Ocean.svg') }}" alt="">-->
 
-            <div class="name_music">
+<!--            <div class="name_music">-->
 
-                <div class="name_of_music">Astronaut in the Ocean</div>
-                <div class="author">MASKED WOLF</div>
+<!--                <div class="name_of_music">Astronaut in the Ocean</div>-->
+<!--                <div class="author">MASKED WOLF</div>-->
 
-            </div>
+<!--            </div>-->
 
-            <div class="duration_of_music">2.13</div>
+<!--            <div class="duration_of_music">2.13</div>-->
 
-            <img class="star" src="{{ url_for('static', filename='img/Star.svg') }}" alt="">
+<!--            <img class="star" src="{{ url_for('static', filename='img/Star.svg') }}" alt="">-->
 
-        </div>
-        <div class="number3">
+<!--        </div>-->
+<!--        <div class="number3">-->
 
-            <img class="icon" src="{{ url_for('static', filename='img/Where does love go.svg') }}" alt="">
+<!--            <img class="icon" src="{{ url_for('static', filename='img/Where does love go.svg') }}" alt="">-->
 
-            <div class="name_music">
+<!--            <div class="name_music">-->
 
-                <div class="name_of_music">Where does love go</div>
-                <div class="author">Synymata, Elle Love Go</div>
-                
-            </div>
+<!--                <div class="name_of_music">Where does love go</div>-->
+<!--                <div class="author">Synymata, Elle Love Go</div>-->
+<!--                -->
+<!--            </div>-->
 
-            <div class="duration_of_music">4.23</div>
+<!--            <div class="duration_of_music">4.23</div>-->
 
-            <img class="star" src="{{ url_for('static', filename='img/Star.svg') }}" alt="">
+<!--            <img class="star" src="{{ url_for('static', filename='img/Star.svg') }}" alt="">-->
 
-        </div>
+<!--        </div>-->
+        {% for music in all_music %}
         <div class="number4">
 
-            <img class="icon" src="{{ url_for('static', filename='img/Carousel.svg') }}" alt="">
+            <img class="icon" src="{{music.link_img}}" alt="">
 
             <div class="name_music">
 
-                <div class="name_of_music">Carousel</div>
-                <div class="author">Hightcore Reality</div>
+                <div class="name_of_music">{{music.name}}</div>
+                <div class="author">{{music.name_author}}</div>
 
             </div>
 
-            <div class="duration_of_music">3.16</div>
+            <div class="duration_of_music">{{music.duration_of_music}}</div>
 
             <img class="star" src="{{ url_for('static', filename='img/Star.svg') }}" alt="">
 
         </div>
+        {% endfor %}
     </div>
     </main>
 {% endblock %}

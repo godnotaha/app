@@ -477,7 +477,8 @@ ul{
     margin-top: 3vw;
 }
 
-.number1,.number2,.number3,.number4{
+.number4{
+    display: flex;
     margin-top: 3vw;
     margin-left: 4vw;
     width: 76vw;

@@ -4,6 +4,7 @@ import models.db_session
 import models.user
 import forms
 import models.music
+import models.all_music
 
 from flask_login import LoginManager, login_required, login_user, logout_user
 
@@ -63,7 +64,9 @@ def logout():
 
 @my_first_app.route('/home')
 def home():
-    return render_template("home_page.html")
+    db_sess = models.db_session.create_session()
+    music = db_sess.query(models.all_music.All_music)
+    return render_template("home_page.html", all_music = music)
 
 
 @my_first_app.route('/statistic')
