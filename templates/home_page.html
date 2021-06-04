@@ -9,18 +9,18 @@
 
         <div class="menu_right">
 
-            <div class="nav_menu">
-                <img class="customization" src="{{ url_for('static', filename='img/customization.svg') }}" alt="">
-                <img src="{{ url_for('static', filename='img/Search.svg') }}" alt="">
-                <img src="{{ url_for('static', filename='img/notification.svg') }}" alt="">
-                
-            </div>
+<!--            <div class="nav_menu">-->
+<!--                <img class="customization" src="{{ url_for('static', filename='img/customization.svg') }}" alt="">-->
+<!--                <img src="{{ url_for('static', filename='img/Search.svg') }}" alt="">-->
+<!--                <img src="{{ url_for('static', filename='img/notification.svg') }}" alt="">-->
+<!--                -->
+<!--            </div>-->
 
             <div class="personal_data">
                 <!-- <img src="img\name background.svg" alt=""> -->
                 <img class="avatar" src="{{ url_for('static', filename='img/avatar.svg') }}" alt="">
-                <div class="name">Твой ник</div>
-                <img class="arrow" src="{{ url_for('static', filename='img/arrow.svg') }}" alt="">
+                <div class="name">{{current_user.email}}</div>
+<!--                <img class="arrow" src="{{ url_for('static', filename='img/arrow.svg') }}" alt="">-->
             </div>
 
         </div>

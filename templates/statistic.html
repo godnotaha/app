@@ -16,27 +16,18 @@
             <th scope="col">#</th>
             <th scope="col">Название</th>
             <th scope="col">Количество прослушиваний</th>
-            <th scope="col">Время прослушивания</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Ты горишь как огонь</td>
-            <td>3</td>
-            <td>9:27</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+        {% for sing in music %}
+          {% if current_user.id == sing.user_id %}
+            <tr>
+                <th scope="row">{{sing.id}}</th>
+                <td>{{sing.name}}</td>
+                <td>{{sing.count}}</td>
+              </tr>
+          {% endif %}
+        {% endfor %}
         </tbody>
       </table>
 

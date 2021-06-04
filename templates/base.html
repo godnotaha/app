@@ -6,9 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
     {% block link %}{% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
 
 </head>
 <body>
@@ -20,20 +21,26 @@
             <img class="site_icon" src="{{ url_for('static', filename='img/banknote.jpg') }}">
         </div>
 
-        <!-- <nav class="el_menu"> -->
+         <nav class="el_menu">
             <ul class="els_menu">
+                {% if current_user.is_authenticated %}
                 <li><a href="/home"><img class="el_menu" src="{{ url_for('static', filename='img/charge.svg') }}" alt=""></a></li>
-                <li><a href=""><img class="el_menu" src="{{ url_for('static', filename='img/money.svg') }}" alt=""></a></li>
+<!--                <li><a href=""><img class="el_menu" src="{{ url_for('static', filename='img/money.svg') }}" alt=""></a></li>-->
                 <li><a href="/statistic"><img class="el_menu" src="{{ url_for('static', filename='img/statistic.svg') }}" alt=""></a></li>
-                <li><a href=""><img class="el_menu" src="{{ url_for('static', filename='img/library.svg') }}" alt=""></a></li>
-                <li><a href=""><img class="el_menu" src="{{ url_for('static', filename='img/temporarily.svg') }}" alt=""></a></li>
+<!--                <li><a href=""><img class="el_menu" src="{{ url_for('static', filename='img/library.svg') }}" alt=""></a></li>-->
+<!--                <li><a href=""><img class="el_menu" src="{{ url_for('static', filename='img/temporarily.svg') }}" alt=""></a></li>-->
+                <li><a href="/logout"><img class="el_menu" src="{{ url_for('static', filename='img/exit.svg') }}" alt=""></a></li>
+                {% else %}
+                <li><a href="/"><img class="el_menu" src="{{ url_for('static', filename='img/charge.svg') }}" alt=""></a></li>
+                <li><a href="/"><img class="el_menu" src="{{ url_for('static', filename='img/statistic.svg') }}" alt=""></a></li>
+                {% endif %}
             </ul>
 
         </nav>
 
-        <div class="exit">
-            <a href=""><img class="button_exit" src="{{ url_for('static', filename='img/exit.svg') }}" alt=""></a>
-        </div>
+<!--        <div class="exit">-->
+<!--            <a href=""><img class="button_exit" src="{{ url_for('static', filename='img/exit.svg') }}" alt=""></a>-->
+<!--        </div>-->
 
     </div>
     </aside>

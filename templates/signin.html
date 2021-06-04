@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 
-{% block title %}Регистрация{% endblock %}
+{% block title %}Войти{% endblock %}
 {% block link %}<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">{% endblock %}
 
 {% block main %}
-            <div class="container">
-                <h1>Регистрация</h1>
+
+                <div class="container">
+                <h1>Вход</h1>
                 <form method="POST">
                     {{ form.hidden_tag() }}
                              <div class="mb-3">
@@ -24,14 +25,7 @@
                                     </div>
                                 {% endfor %}
                             </div>
-                            <div class="mb-3">
-                                {{ form.password2(class="form-control", type="password", placeholder="Повторите пароль") }}
-                                {% for error in form.password2.errors %}
-                                    <div class="alert alert-danger" role="alert">
-                                        {{ error }}
-                                    </div>
-                                {% endfor %}
-                            </div>
+
                             {{ form.submit(type="submit", class="btn btn-primary") }}
 
                             {% if message %}
@@ -40,8 +34,5 @@
                                 </div>
                             {% endif %}
                 </form>
-                <div class="col-12">
-                        Если есть учетная запись, нужно <a class="link-primary" href="{{ url_for('login') }}">войти в систему</a>
                 </div>
-            </div>
 {% endblock %}
