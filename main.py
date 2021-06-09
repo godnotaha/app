@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, request
 
 import models.db_session
 import models.user
@@ -6,7 +6,7 @@ import forms
 import models.music
 import models.all_music
 
-from flask_login import LoginManager, login_required, login_user, logout_user
+from flask_login import LoginManager, login_required, login_user, logout_user, current_user
 
 my_first_app = Flask(__name__)
 my_first_app.config.from_object("config")
@@ -72,9 +72,25 @@ def home():
 @my_first_app.route('/statistic')
 def about():
     db_sess = models.db_session.create_session()
-    music = db_sess.query(models.music.Music)
+    music_add_favorites = db_sess.query(models.music.Music)
     user = db_sess.query(models.user.User).filter(models.user.User.id == 1).first()
-    return render_template("statistic.html", user = user, music = music)
+    all_music = db_sess.query(models.all_music.All_music)
+    return render_template("statistic.html", user = user, music_add_favorites = music_add_favorites, all_music=all_music)
+
+
+@my_first_app.route("/add-to-favourites")
+def add_to_favourites():
+    music_id = request.args.get('values')
+    print(music_id)
+    db_sess = models.db_session.create_session()
+    music = models.music.Music(
+        user_id=current_user.id,
+        music_id=music_id
+    )
+    db_sess.add(music)
+    db_sess.commit()
+    return redirect("/home")
+
 
 
 if __name__ == "__main__":

@@ -3,7 +3,7 @@
 {% block link %}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">{% endblock %}
 
 {% block main %}
-<main class = "main"><h1>Статистика</h1>
+<main class = "main"><h1>Избранное</h1>
 
 
 
@@ -13,19 +13,19 @@
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">#</th>
             <th scope="col">Название</th>
-            <th scope="col">Количество прослушиваний</th>
           </tr>
         </thead>
         <tbody>
-        {% for sing in music %}
-          {% if current_user.id == sing.user_id %}
-            <tr>
-                <th scope="row">{{sing.id}}</th>
-                <td>{{sing.name}}</td>
-                <td>{{sing.count}}</td>
-              </tr>
+        {% for sing_add_favorites in music_add_favorites %}
+          {% if current_user.id == sing_add_favorites.user_id %}
+            {% for sing in all_music %}
+                {% if sing_add_favorites.music_id == sing.id %}
+                    <tr>
+                        <td>{{sing.name}}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
           {% endif %}
         {% endfor %}
         </tbody>

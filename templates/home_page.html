@@ -136,7 +136,7 @@
 
             <div class="duration_of_music">{{music.duration_of_music}}</div>
 
-            <img class="star" src="{{ url_for('static', filename='img/Star.svg') }}" alt="">
+            <a href="{{ url_for('add_to_favourites', values=music.id) }}" ><img class="star" src="{{ url_for('static', filename='img/Star.svg') }}" alt=""></a>
 
         </div>
         {% endfor %}
