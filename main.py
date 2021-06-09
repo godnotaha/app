@@ -5,6 +5,7 @@ import models.user
 import forms
 import models.music
 import models.all_music
+import os
 
 from flask_login import LoginManager, login_required, login_user, logout_user, current_user
 
@@ -94,4 +95,7 @@ def add_to_favourites():
 
 
 if __name__ == "__main__":
-    my_first_app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    my_first_app.run(debug=True, host='0.0.0.0', port=port)
+
+
