@@ -91,9 +91,7 @@ ul{
 }
 
 .the_main{
-    font-size: bolder;
     font-size: 2vw;
-
 }
 
 .menu_right{
@@ -173,14 +171,10 @@ ul{
 
 .appointment1,.appointment2,.appointment3,.appointment4{
     font-family: 'Poppins', sans-serif;
-    font-size: bolder;
     font-size:1.7vw ;
     margin-left: 2.5vw;
     margin-top: 1vw;
     margin-bottom: 0.4vw;
-    A:link {
-    text-decoration: none; /* Убирает подчеркивание для ссылок */
-   }
 }
 
 .type_favorite{
@@ -266,8 +260,6 @@ ul{
 
 .number1,.number2,.number3,.number4{
     display: flex;
-    align-items: baseline;
-    align-items: center;
     margin-top: 1vw;
     margin-left: 4vw;
     justify-content: space-between;
@@ -302,7 +294,6 @@ ul{
 
 .name_of_music{
     margin-bottom: 1vw;
-    font-size: bold;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -329,7 +320,7 @@ ul{
     background-color: #F6F0D8;
     height: 10vw;
     width: 10vw;
-    border-radius: border-radius: 13px;
+    border-radius: 13px;
     display: flex;
     align-items: center;
     margin-top: 5vw;
@@ -373,9 +364,7 @@ ul{
 }
     
 .the_main{
-    font-size: bolder;
     font-size: 5vw;
-
 }
 
 .menu_right{
@@ -514,7 +503,7 @@ ul{
 .star{
     width: 6vw;
     height: 4vw;
-    margin-right: 0vw;
+    margin-right: 0;
 }
 
 .duration_of_music{
@@ -525,7 +514,7 @@ ul{
 
 .name_music{
     font-size: 0.8vw;
-    margin-right: 0vw;
+    margin-right: 0;
     margin-left: 5vw;
     width: 40vw;
     
