@@ -18,7 +18,7 @@
     <div class="main_header">
 
         <div class="badge">
-            <img class="site_icon" src="{{ url_for('static', filename='img/banknote.jpg') }}">
+            <img class="site_icon" src="{{ url_for('static', filename='img/note.png') }}">
         </div>
 
          <nav class="el_menu">
@@ -43,8 +43,9 @@
 <!--        </div>-->
 
     </div>
+        {% block aside %}{% endblock %}
     </aside>
-    {% block aside %}{% endblock %}
+
     {% block main %}{% endblock %}
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 </body>

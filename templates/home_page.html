@@ -18,7 +18,7 @@
 
             <div class="personal_data">
                 <!-- <img src="img\name background.svg" alt=""> -->
-                <img class="avatar" src="{{ url_for('static', filename='img/avatar.svg') }}" alt="">
+                <img class="avatar" src="{{ url_for('static', filename='img/Avatar.png') }}" alt="">
                 <div class="name">{{current_user.email}}</div>
 <!--                <img class="arrow" src="{{ url_for('static', filename='img/arrow.svg') }}" alt="">-->
             </div>
@@ -27,50 +27,55 @@
 
     </div>
 
-    <div class="selection_of_the_type_of_music">
 
-        <div class="type_favorite">
 
-            <div class="appointment1">любимое</div>
-            <div>
+        <nav class="selection_of_the_type_of_music">
 
-                <img class="black_cloud" src="{{ url_for('static', filename='img/cloud.svg') }}" alt="">
-                <img class="music_wave" src="{{ url_for('static', filename='img/wave.svg') }}" alt="">
+            <div class="type_favorite">
+
+                <div class="appointment1">любимое</div>
+                <div>
+
+                    <img class="black_cloud" src="{{ url_for('static', filename='img/cloud.svg') }}" alt="">
+                    <img class="music_wave" src="{{ url_for('static', filename='img/wave.svg') }}" alt="">
+
+                </div>
+            </div>
+            <div class="type_opposite">
+
+                <div class="appointment2">Чёрный список</div>
+                <div class="white-box">
+
+                    <!-- <img src="img\white.svg" alt=""> -->
+                    <img class="B" src="{{ url_for('static', filename='img/bad_note.png') }}" alt="">
+
+                </div>
+            </div>
+            <a href="/statistic" class="a" >
+            <div class="type_favorites" >
+
+                <div class="appointment3">избранное</div>
+                <div class="white-box">
+
+                    <!-- <img src="img\white.svg" alt=""> -->
+                    <img class="icon_favorite" src="{{ url_for('static', filename='img/Star.svg') }}" alt="">
+
+                </div>
 
             </div>
-        </div>
-        <div class="type_opposite">
+            </a>
+            <div class="type_forbidden_music">
 
-            <div class="appointment2">противное</div>
-            <div class="white-box">
+                <div class="appointment4">запретная музыка</div>
+                <div class="white-box">
 
-                <!-- <img src="img\white.svg" alt=""> -->
-                <img class="B" src="{{ url_for('static', filename='img/B.svg') }}" alt="">
+                    <!-- <img src="img\white.svg" alt=""> -->
+                    <img class="eth" src="{{ url_for('static', filename='img/cross.png') }}" alt="">
 
+                </div>
             </div>
-        </div>
-        <div class="type_favorites">
 
-            <div class="appointment3">избранное</div>
-            <div class="white-box">
-
-                <!-- <img src="img\white.svg" alt=""> -->
-                <img class="plus" src="{{ url_for('static', filename='img/плюс.svg') }}" alt="">
-
-            </div>
-        </div>
-        <div class="type_forbidden_music">
-
-            <div class="appointment4">запретная музыка</div>
-            <div class="white-box">
-
-                <!-- <img src="img\white.svg" alt=""> -->
-                <img class="eth" src="{{ url_for('static', filename='img/ethereum 1.svg') }}" alt="">
-
-            </div>
-        </div>
-
-    </div>
+        </nav>
 
     <div class="music_menu">
 

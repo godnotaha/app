@@ -41,8 +41,8 @@ ul{
 }
 
 .site_icon{
-    width: 6vw;
-    height: 3vw;
+    width: 7vw;
+    height: 5vw;
 }
 
 .els_menu{
@@ -143,6 +143,7 @@ ul{
 .avatar{
     width: 4.1vw;
     height: 4.1vw;
+
 }
 
 .name{
@@ -165,6 +166,11 @@ ul{
     margin-right: 1.6vw;
 }
 
+.a{
+    text-decoration: none;
+    color:black;
+}
+
 .appointment1,.appointment2,.appointment3,.appointment4{
     font-family: 'Poppins', sans-serif;
     font-size: bolder;
@@ -172,6 +178,9 @@ ul{
     margin-left: 2.5vw;
     margin-top: 1vw;
     margin-bottom: 0.4vw;
+    A:link {
+    text-decoration: none; /* Убирает подчеркивание для ссылок */
+   }
 }
 
 .type_favorite{
@@ -205,7 +214,6 @@ ul{
     height: 14.4vw;
     border-radius: 24px;
     margin-left: 1.5vw;
-    
 }
 
 .type_forbidden_music{
@@ -232,7 +240,16 @@ ul{
 }
 
 .B{
-    width: 4vw;    
+    width: 6vw;
+}
+
+.eth{
+    width: 3.5vw;
+    height: 4vw;
+}
+
+.icon_favorite{
+    width: 4.2vw;
 }
 
 .white-box{
@@ -241,6 +258,7 @@ ul{
     height: 4vw;
     display: flex;
     justify-content: center;
+    align-items: center;
     border-radius: 14px;
     margin-left: 1.5vw;
     margin-top: 2.5vw;
@@ -309,21 +327,22 @@ ul{
 
 .badge{
     background-color: #F6F0D8;
-    height: 6vw;
-    width: 6vw;
-    border-radius: 24px;
+    height: 10vw;
+    width: 10vw;
+    border-radius: border-radius: 13px;
     display: flex;
     align-items: center;
+    margin-top: 5vw;
 }
 
 .site_icon{
-    width: 6vw;
-    height: 3vw;
+    width: 10vw;
+    height: 7vw;
 }
 
 .els_menu{
     /* background-color: blue; */
-    width: 6vw;
+    width: 8.5vw;
     height: 30vw;
     display: flex;
     flex-direction: column;
@@ -332,8 +351,8 @@ ul{
 }
 
 .el_menu{
-    margin-top: 5vw;
-    width: 3.5vw;
+    margin-top: 7vw;
+    width: 8.5vw;
 }
 
 .button_exit{
@@ -379,10 +398,11 @@ ul{
     align-items: center;
     background-color: #F2F5FA;
     justify-content:space-between;
-    padding-right: 3vw;
+    padding-right: 10vw;
     padding-top: 1.5vw;
     padding-bottom: 1.5vw;
     margin-top: 1vw;
+    margin-left: 23vw;
     border-radius: 4vw;
     height: 3.3vw;
 }
@@ -470,7 +490,10 @@ ul{
     background-color: #FFFFFF;
     width: 7vw;
     height: 7vw;
+}
 
+.B{
+    width: 10vw;
 }
 
 .music_menu{
